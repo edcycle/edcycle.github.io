@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>心力評估表</title>
+    <link rel="stylesheet" type="text/css" href="css/bulma.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          心力評估表 -
+          <span class="content is-medium"
+            >估算您十年內發生缺血性心臟病的機會有多高？</span
+          >
+        </h1>
+        <h2 class="subtitle is-6">
+          （本表為「Framingham Risk Score（佛萊明漢）危險預估評分表」
+          簡稱心力評量表，使用時請洽詢醫療人員協助評估與說明！）
+        </h2>
+      </div>
+    </section>
+
+    <div class="container box">
+      <!-- 性別 gender -->
+      <div class="field">
+        <label class="label">性別</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="gender" value="male" />
+            男
+          </label>
+          <label class="radio">
+            <input type="radio" name="gender" value="female" />
+            女
+          </label>
+        </div>
+      </div>
+      <!-- 年齡 -->
+      <div class="field">
+        <label class="label">年齡</label>
+        <div class="control">
+          <div class="select">
+            <select id="age">
+              <option data-female="-9" data-male="-1">30 ~ 34 歲</option>
+              <option data-female="-4" data-male="0">35 ~ 39 歲</option>
+              <option data-female="0" data-male="1">40 ~ 44 歲</option>
+              <option data-female="3" data-male="2">45 ~ 49 歲</option>
+              <option data-female="6" data-male="3">50 ~ 54 歲</option>
+              <option data-female="7" data-male="4">55 ~ 59 歲</option>
+              <option data-female="8" data-male="5">60 ~ 64 歲</option>
+              <option data-female="8" data-male="6">65 ~ 69 歲</option>
+              <option data-female="8" data-male="7">70 ~ 74 歲</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- 膽固醇 ldl-c -->
+      <div class="field">
+        <label class="label">膽固醇 (mg/dl)</label>
+        <div class="control">
+          <label class="radio">
+            <input
+              type="radio"
+              name="ldl-c"
+              id="ldl-c-1"
+              data-female="-2"
+              data-male="-3"
+            />
+            &lt; 160
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="ldl-c"
+              id="ldl-c-2"
+              data-female="0"
+              data-male="0"
+            />
+            160 ~ 199
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="ldl-c"
+              id="ldl-c-3"
+              data-female="1"
+              data-male="1"
+            />
+            200 ~ 239
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="ldl-c"
+              id="ldl-c-4"
+              data-female="1"
+              data-male="2"
+            />
+            240 ~ 279
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="ldl-c"
+              id="ldl-c-5"
+              data-female="3"
+              data-male="3"
+            />
+            &ge; 280
+          </label>
+        </div>
+      </div>
+      <!-- 高密度膽固醇 hdl-c -->
+      <div class="field">
+        <label class="label">高密度膽固醇 (mg/dl)</label>
+        <div class="control">
+          <label class="radio">
+            <input
+              type="radio"
+              name="hdl-c"
+              id="hdl-c-1"
+              data-female="5"
+              data-male="2"
+            />
+            &lt; 35
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="hdl-c"
+              id="hdl-c-2"
+              data-female="2"
+              data-male="1"
+            />
+            35 ~ 44
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="hdl-c"
+              id="hdl-c-3"
+              data-female="1"
+              data-male="0"
+            />
+            45 ~ 49
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="hdl-c"
+              id="hdl-c-4"
+              data-female="0"
+              data-male="0"
+            />
+            50 ~ 59
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="hdl-c"
+              id="hdl-c-5"
+              data-female="-3"
+              data-male="-2"
+            />
+            &ge; 60
+          </label>
+        </div>
+      </div>
+      <!-- 血壓 bloodpre -->
+      <div class="field">
+        <label class="label">血壓 (mmHg)</label>
+        <div class="control">
+          <label class="radio">
+            <input
+              type="radio"
+              name="bloodpressure"
+              id="bp-1"
+              data-female="-3"
+              data-male="0"
+            />
+            &lt; 120/80
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="bloodpressure"
+              id="bp-2"
+              data-female="0"
+              data-male="0"
+            />
+            120~129 / 80~84
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="bloodpressure"
+              id="bp-3"
+              data-female="0"
+              data-male="1"
+            />
+            130~139 / 85~89
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="bloodpressure"
+              id="bp-4"
+              data-female="2"
+              data-male="2"
+            />
+            140~159 / 90~99
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="bloodpressure"
+              id="bp-5"
+              data-female="3"
+              data-male="3"
+            />
+            &ge; 160 / 100
+          </label>
+        </div>
+        <p class="help">當收縮壓與舒張壓分數不同時，取分數較高者。</p>
+      </div>
+      <!-- 糖尿病 diabetes -->
+      <div class="field">
+        <label class="label">糖尿病</label>
+        <div class="control">
+          <label class="radio">
+            <input
+              type="radio"
+              name="diabetes"
+              id="diabetes-1"
+              data-female="0"
+              data-male="0"
+            />
+            無
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="diabetes"
+              id="diabetes-1"
+              data-female="4"
+              data-male="2"
+            />
+            有
+          </label>
+        </div>
+      </div>
+      <!-- 吸菸 smoke -->
+      <div class="field">
+        <label class="label">吸菸</label>
+        <div class="control">
+          <label class="radio">
+            <input
+              type="radio"
+              name="smoke"
+              id="smoke-1"
+              data-female="0"
+              data-male="0"
+            />
+            無
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="smoke"
+              id="smoke-2"
+              data-female="2"
+              data-male="2"
+            />
+            有
+          </label>
+        </div>
+      </div>
+
+      <input
+        class="button is-primary is-light"
+        type="submit"
+        id="submit"
+        value="確認"
+      />
+      <input
+        class="button is-danger is-light"
+        type="reset"
+        id="reset"
+        value="清空"
+      />
+
+      <article class="message" style="margin-top: 1rem;">
+        <div class="message-body" id="msg">
+          勾選所有項目後點確認！
+        </div>
+      </article>
+    </div>
+
+    <div class="container">
+      <figure class="image">
+        <img src="frs.jpg" />
+      </figure>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
