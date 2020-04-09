@@ -32,6 +32,10 @@ $(document).ready(function () {
 
   // 清空表單
   $("#reset").click(function () {
+    $("input:text").each(function () {
+      $(this).val("");
+    });
+
     $("input:radio").each(function () {
       $(this).prop("checked", false);
     });

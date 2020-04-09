@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>員工過負荷量表</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.1/css/bulma.min.css"
+    />
+  </head>
+  <body style="font-family: 微軟正黑體;">
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          員工過負荷量表
+        </h1>
+        <h2 class="subtitle is-6">
+          Questionnaire Overload
+        </h2>
+      </div>
+    </section>
+
+    <div class="container box">
+      <div class="columns">
+        <div class="column is-one-fifth">
+          <div class="field">
+            <label class="label">姓名</label>
+            <div class="control">
+              <input class="input" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-fifth">
+          <div class="field">
+            <label class="label">部門</label>
+            <div class="control">
+              <input class="input" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-fifth">
+          <div class="field">
+            <label class="label">工號</label>
+            <div class="control">
+              <input class="input" type="text" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="subtitle">一、個人疲勞 Personal tiredness</h2>
+
+      <!-- 1. 你常覺得疲勞嗎 ? -->
+      <div class="field">
+        <label class="label">1. 你常覺得疲勞嗎 ?</label>
+
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="tired" value="100" />
+            (1) 總是
+          </label>
+          <label class="radio">
+            <input type="radio" name="tired" value="75" />
+            (2) 常常
+          </label>
+          <label class="radio">
+            <input type="radio" name="tired" value="50" />
+            (3) 有時候
+          </label>
+          <label class="radio">
+            <input type="radio" name="tired" value="25" />
+            (4) 不常
+          </label>
+          <label class="radio">
+            <input type="radio" name="tired" value="0" />
+            (5) 從未或幾乎從未
+          </label>
+        </div>
+      </div>
+
+      <!-- 2. 你常覺得身體上體力透支嗎 ? -->
+      <div class="field">
+        <label class="label">2. 你常覺得身體上體力透支嗎 ?</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="exhausted" value="100" />
+            (1) 總是
+          </label>
+          <label class="radio">
+            <input type="radio" name="exhausted" value="75" />
+            (2) 常常
+          </label>
+          <label class="radio">
+            <input type="radio" name="exhausted" value="50" />
+            (3) 有時候
+          </label>
+          <label class="radio">
+            <input type="radio" name="exhausted" value="25" />
+            (4) 不常
+          </label>
+          <label class="radio">
+            <input type="radio" name="exhausted" value="0" />
+            (5) 從未或幾乎從未
+          </label>
+        </div>
+      </div>
+
+      <!-- 3. 你常覺得情緒上心力交瘁嗎 ? -->
+      <div class="field">
+        <label class="label">3.你常覺得情緒上心力交瘁嗎 ?</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="helpless" value="100" />
+            (1) 總是
+          </label>
+          <label class="radio">
+            <input type="radio" name="helpless" value="75" />
+            (2) 常常
+          </label>
+          <label class="radio">
+            <input type="radio" name="helpless" value="50" />
+            (3) 有時候
+          </label>
+          <label class="radio">
+            <input type="radio" name="helpless" value="25" />
+            (4) 不常
+          </label>
+          <label class="radio">
+            <input type="radio" name="helpless" value="0" />
+            (5) 從未或幾乎從未
+          </label>
+        </div>
+      </div>
+
+      <!-- 4. 你常會覺得，「我快要撐不下去了」嗎 ? -->
+      <div class="field">
+        <label class="label">4. 你常會覺得，「我快要撐不下去了」嗎 ?</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="cant_take_it" value="100" />
+            (1) 總是
+          </label>
+          <label class="radio">
+            <input type="radio" name="cant_take_it" value="75" />
+            (2) 常常
+          </label>
+          <label class="radio">
+            <input type="radio" name="cant_take_it" value="50" />
+            (3) 有時候
+          </label>
+          <label class="radio">
+            <input type="radio" name="cant_take_it" value="25" />
+            (4) 不常
+          </label>
+          <label class="radio">
+            <input type="radio" name="cant_take_it" value="0" />
+            (5) 從未或幾乎從未
+          </label>
+        </div>
+      </div>
+
+      <!-- 5. 你常覺得精疲力竭嗎 ? -->
+      <div class="field">
+        <label class="label">5. 你常覺得精疲力竭嗎 ?</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="fatigued" value="100" />
+            (1) 總是
+          </label>
+          <label class="radio">
+            <input type="radio" name="fatigued" value="75" />
+            (2) 常常
+          </label>
+          <label class="radio">
+            <input type="radio" name="fatigued" value="50" />
+            (3) 有時候
+          </label>
+          <label class="radio">
+            <input type="radio" name="fatigued" value="25" />
+            (4) 不常
+          </label>
+          <label class="radio">
+            <input type="radio" name="fatigued" value="0" />
+            (5) 從未或幾乎從未
+          </label>
+        </div>
+      </div>
+
+      <!-- 6. 你常常覺得虛弱，好像快要生病了嗎 ? -->
+      <div class="field">
+        <label class="label">6. 你常常覺得虛弱，好像快要生病了嗎 ?</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="weak" value="100" />
+            (1) 總是
+          </label>
+          <label class="radio">
+            <input type="radio" name="weak" value="75" />
+            (2) 常常
+          </label>
+          <label class="radio">
+            <input type="radio" name="weak" value="50" />
+            (3) 有時候
+          </label>
+          <label class="radio">
+            <input type="radio" name="weak" value="25" />
+            (4) 不常
+          </label>
+          <label class="radio">
+            <input type="radio" name="weak" value="0" />
+            (5) 從未或幾乎從未
+          </label>
+        </div>
+      </div>
+
+      <h2 class="subtitle">二、工作疲勞 Tiredness from work</h2>
+
+      <!-- 1. 你的工作會令人情緒上心力交瘁嗎 ? -->
+      <div class="field">
+        <label class="label">1. 你的工作會令人情緒上心力交瘁嗎 ?</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="work_helpless" value="100" />
+            (1) 總是
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_helpless" value="75" />
+            (2) 常常
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_helpless" value="50" />
+            (3) 有時候
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_helpless" value="25" />
+            (4) 不常
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_helpless" value="0" />
+            (5) 從未或幾乎從未
+          </label>
+        </div>
+      </div>
+
+      <!-- 2. 你的工作會讓你覺得快要累垮了嗎 ? -->
+      <div class="field">
+        <label class="label">2. 你的工作會讓你覺得快要累垮了嗎 ?</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="work_exhausted" value="100" />
+            (1) 總是
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_exhausted" value="75" />
+            (2) 常常
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_exhausted" value="50" />
+            (3) 有時候
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_exhausted" value="25" />
+            (4) 不常
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_exhausted" value="0" />
+            (5) 從未或幾乎從未
+          </label>
+        </div>
+      </div>
+      <!-- 3. 你的工作會讓你覺得挫折嗎 ? -->
+      <div class="field">
+        <label class="label">3. 你的工作會讓你覺得挫折嗎 ?</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="work_frustrated" value="100" />
+            (1) 總是
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_frustrated" value="75" />
+            (2) 常常
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_frustrated" value="50" />
+            (3) 有時候
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_frustrated" value="25" />
+            (4) 不常
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_frustrated" value="0" />
+            (5) 從未或幾乎從未
+          </label>
+        </div>
+      </div>
+      <!-- 4. 工作一整天之後，你覺得精疲力竭嗎 ? -->
+      <div class="field">
+        <label class="label">4. 工作一整天之後，你覺得精疲力竭嗎 ?</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="work_fatigued" value="100" />
+            (1) 總是
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_fatigued" value="75" />
+            (2) 常常
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_fatigued" value="50" />
+            (3) 有時候
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_fatigued" value="25" />
+            (4) 不常
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_fatigued" value="0" />
+            (5) 從未或幾乎從未
+          </label>
+        </div>
+      </div>
+      <!-- 5. 上班之前只要想到又要工作一整天，你就覺得沒力嗎 ? -->
+      <div class="field">
+        <label class="label"
+          >5. 上班之前只要想到又要工作一整天，你就覺得沒力嗎 ?</label
+        >
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="work_powerless" value="100" />
+            (1) 總是
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_powerless" value="75" />
+            (2) 常常
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_powerless" value="50" />
+            (3) 有時候
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_powerless" value="25" />
+            (4) 不常
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_powerless" value="0" />
+            (5) 從未或幾乎從未
+          </label>
+        </div>
+      </div>
+      <!-- 6. 上班時你會覺得每一刻都很難熬嗎 ? -->
+      <div class="field">
+        <label class="label">6. 上班時你會覺得每一刻都很難熬嗎 ?</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="work_struggle" value="100" />
+            (1) 總是
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_struggle" value="75" />
+            (2) 常常
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_struggle" value="50" />
+            (3) 有時候
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_struggle" value="25" />
+            (4) 不常
+          </label>
+          <label class="radio">
+            <input type="radio" name="work_struggle" value="0" />
+            (5) 從未或幾乎從未
+          </label>
+        </div>
+      </div>
+      <!--! 反向題 7. 不工作的時候，你沒有足夠的精力陪朋友或家人嗎 ? -->
+      <div class="field">
+        <label class="label"
+          >7. 不工作的時候，你沒有足夠的精力陪朋友或家人嗎 ?</label
+        >
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="energy" value="0" />
+            (1) 總是
+          </label>
+          <label class="radio">
+            <input type="radio" name="energy" value="25" />
+            (2) 常常
+          </label>
+          <label class="radio">
+            <input type="radio" name="energy" value="50" />
+            (3) 有時候
+          </label>
+          <label class="radio">
+            <input type="radio" name="energy" value="75" />
+            (4) 不常
+          </label>
+          <label class="radio">
+            <input type="radio" name="energy" value="100" />
+            (5) 從未或幾乎從未
+          </label>
+        </div>
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <input
+            class="button is-primary is-light"
+            type="submit"
+            id="submit"
+            value="確認"
+          />
+        </div>
+        <div class="control">
+          <input
+            class="button is-danger is-light"
+            type="reset"
+            id="reset"
+            value="清空"
+          />
+        </div>
+      </div>
+
+      <article class="message" style="margin-top: 1rem;">
+        <div class="message-body" id="msg">
+          勾選所有項目後點確認！
+        </div>
+      </article>
+
+      <table class="table is-fullwidth">
+        <thead>
+          <tr>
+            <th>過勞類型</th>
+            <th>分數</th>
+            <th>分級</th>
+            <th>解釋</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="personal-1">
+            <td>個人相關</td>
+            <td>50分以下</td>
+            <td>輕微</td>
+            <td>
+              您的過勞程度輕微，您並不常感到疲勞、體力透支、精疲力竭、或者虛弱好像快生病的樣子。
+            </td>
+          </tr>
+          <tr id="personal-2">
+            <td>個人相關</td>
+            <td>50-70分</td>
+            <td>中度</td>
+            <td>
+              你的個人過勞程度中等。您有時候感到疲勞、體力透支、精疲力竭、或者虛弱好像快生病的樣子。<br />
+              建議您找出生活的壓力源，進一步的調適自己，增加放鬆與休息的時間。
+            </td>
+          </tr>
+          <tr id="personal-3">
+            <td>個人相關</td>
+            <td>70分以上</td>
+            <td>嚴重</td>
+            <td>
+              您的個人過勞程度嚴重。您時常感到疲勞、體力透支、精疲力竭、或者虛弱好像快生病的樣子。<br />
+              建議您適度的改變生活方式，增加運動與休閒時間之外，您還需要進一步尋找專業人員諮詢。
+            </td>
+          </tr>
+
+          <tr id="work-1">
+            <td>工作相關</td>
+            <td>45分以下</td>
+            <td>輕微</td>
+            <td>
+              您的工作相關過勞程度輕微，您的工作並不會讓您感覺很沒力、心力交瘁、很挫折。
+            </td>
+          </tr>
+          <tr id="work-2">
+            <td>工作相關</td>
+            <td>45-60分</td>
+            <td>中度</td>
+            <td>
+              您的工作相關過勞程度中等，您有時對工作感覺沒力，沒有興趣，有點挫折。
+            </td>
+          </tr>
+          <tr id="work-3">
+            <td>工作相關</td>
+            <td>60分以上</td>
+            <td>嚴重</td>
+            <td>
+              您的工作相關過勞程度嚴重，您已經快被工作累垮了，您感覺心力交瘁，感覺挫折，<br />
+              而且上班時都很難熬，此外您可能缺少休閒時間，沒有時間陪伴家人朋友。<br />
+              建議您適度的改變生活方式，增加運動與休閒時間之外，您還需要進一步尋找專業人員諮詢。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
