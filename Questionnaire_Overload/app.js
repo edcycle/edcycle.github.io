@@ -17,7 +17,22 @@ const WORK_LIST = [
   "energy",
 ];
 
+function clearHelp() {
+  $("tr").each(function () {
+    $(this).removeClass("is-selected");
+  });
+
+  $("p.help").each(function () {
+    $(this).remove();
+  });
+
+  $("#msg").text("勾選所有項目後點確認！");
+  $("article.message").removeClass("is-success is-warning");
+}
+
 function resetForm() {
+  clearHelp();
+
   $("input:text").each(function () {
     $(this).val("");
   });
@@ -25,32 +40,35 @@ function resetForm() {
   $("input:radio").each(function () {
     $(this).prop("checked", false);
   });
-
-  $("tr").each(function () {
-    $(this).removeClass("is-selected");
-  });
-
-  $("#msg").text("勾選所有項目後點確認！");
-  $("article.message").removeClass("is-success is-warning");
 }
 
 $(document).ready(function () {
+  // 清空表單
+  $("#reset").click(resetForm);
+
   $("#submit").click(function () {
+    clearHelp();
+
     let check = true;
     $("input:radio").each(function () {
       let name = $(this).attr("name");
       if ($("input:radio[name=" + name + "]:checked").length == 0) {
         check = false;
+        if ($("p." + name).length == 0) {
+          $("#" + name).append(
+            $(document.createElement("p"))
+              .addClass("help has-text-danger " + name)
+              .text("此項尚未勾選！")
+          );
+        }
       }
     });
 
     if (check) {
+      clearHelp();
+
       let personal = 0,
         work = 0;
-
-      $("tr").each(function () {
-        $(this).removeClass("is-selected");
-      });
 
       // * 個人相關分數累加
       PERSONAL_LIST.forEach((name) => {
@@ -99,13 +117,10 @@ $(document).ready(function () {
       }
 
       $("#msg").text("個人相關分數 = " + personal + "，工作相關分數 = " + work);
-      $("article.message").removeClass("is-warning").addClass("is-success");
+      $("article.message").addClass("is-success");
     } else {
       $("#msg").text("請勾選所有項目！");
-      $("article.message").removeClass("is-success").addClass("is-warning");
+      $("article.message").addClass("is-warning");
     }
   });
-
-  // 清空表單
-  $("#reset").click(resetForm);
 });
