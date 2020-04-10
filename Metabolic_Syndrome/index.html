@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>代謝症候群</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.1/css/bulma.min.css"
+    />
+    <style>
+      body {
+        font-family: 微軟正黑體;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          代謝症候群
+        </h1>
+      </div>
+    </section>
+
+    <div class="container box">
+      <div class="columns">
+        <div class="column is-one-fifth">
+          <div class="field">
+            <label class="label">姓名</label>
+            <div class="control">
+              <input class="input" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-fifth">
+          <div class="field">
+            <label class="label">部門</label>
+            <div class="control">
+              <input class="input" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-fifth">
+          <div class="field">
+            <label class="label">工號</label>
+            <div class="control">
+              <input class="input" type="text" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 性別 gender -->
+      <div class="field">
+        <label class="label">性別</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="gender" value="male" />
+            男
+          </label>
+          <label class="radio">
+            <input type="radio" name="gender" value="female" />
+            女
+          </label>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="field">
+            <label class="label">腰圍 (cm)</label>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                id="waist"
+                data-male="90"
+                data-female="80"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="columns is-gapless">
+            <div class="column">
+              <div class="field">
+                <label class="label">血壓</label>
+                <div class="control">
+                  <input class="input" type="number" id="systolic" />
+                </div>
+                <p class="help">收縮壓</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <label class="label">(mmHg)</label>
+                <div class="control">
+                  <input class="input" type="number" id="diastolic" />
+                </div>
+                <p class="help">舒張壓</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <label class="label">高密度脂蛋白膽固醇 (mg/dl)</label>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                id="hdl-c"
+                data-male="40"
+                data-female="50"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <label class="label">空腹血糖 (mg/dl)</label>
+            <div class="control">
+              <input class="input" type="number" id="glucose" />
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <label class="label">三酸甘油脂 (mg/dl)</label>
+            <div class="control">
+              <input class="input" type="number" id="triglycerides" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <input
+            class="button is-primary is-light"
+            type="submit"
+            id="submit"
+            value="確認"
+          />
+        </div>
+        <div class="control">
+          <input
+            class="button is-danger is-light"
+            type="reset"
+            id="reset"
+            value="清空"
+          />
+        </div>
+      </div>
+
+      <article class="message" id="alert">
+        <div class="message-body" id="msg">
+          填選所有項目後點確認！
+        </div>
+      </article>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>危險因子</th>
+                <th>異常值</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>腰圍過粗</td>
+                <td>
+                  腰圍<br />
+                  男性 &#8805; 90 公分（35 吋半）<br />
+                  女性 &#8805; 80 公分（31 吋半）
+                </td>
+              </tr>
+              <tr>
+                <td>血壓偏高</td>
+                <td>
+                  收縮壓 &#8805; 130 mmHg<br />
+                  舒張壓 &#8805; 85 mmHg
+                </td>
+              </tr>
+              <tr>
+                <td>高密度脂蛋白<br />膽固醇偏低</td>
+                <td>
+                  男性 &#60; 40 mg/dl<br />
+                  女性 &#60; 50 mg/dl
+                </td>
+              </tr>
+              <tr>
+                <td>空腹血糖值偏高</td>
+                <td>
+                  &#8805; 100 mg/dl
+                </td>
+              </tr>
+              <tr>
+                <td>三酸甘油脂偏高</td>
+                <td>
+                  &#8805; 150 mg/dl
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="column">
+          <article class="message">
+            <div class="message-header">
+              <p>什麼是代謝症候群？</p>
+            </div>
+            <div class="message-body">
+              代謝症候群是「<strong>三高加二害</strong>」<br />
+              三高是「<strong>血壓偏高、血糖偏高、血脂偏高（三酸甘油脂偏高）</strong>」
+              <br />
+              二害是「<strong>腰圍過粗、好的膽固醇不足（HDL-C）</strong>」
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
