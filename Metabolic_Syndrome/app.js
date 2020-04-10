@@ -45,7 +45,7 @@ $(document).ready(function () {
       let gender = $("input[name='gender']:checked").val();
 
       if ($("#waist").val() >= $("#waist").data()[gender]) count++;
-      if ($("#systolic").val() >= 130 || $("diastolic").val() >= 85) count++;
+      if ($("#systolic").val() >= 130 || $("#diastolic").val() >= 85) count++;
       if ($("#hdl-c").val() < $("#hdl-c").data()[gender]) count++;
       if ($("#glucose").val() >= 100) count++;
       if ($("#triglycerides").val() >= 150) count++;
