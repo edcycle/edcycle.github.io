@@ -22,7 +22,7 @@ function clearHelp() {
     $(this).removeClass("is-selected");
   });
 
-  $("p.help").each(function () {
+  $("span").each(function () {
     $(this).remove();
   });
 
@@ -54,11 +54,11 @@ $(document).ready(function () {
       let name = $(this).attr("name");
       if ($("input:radio[name=" + name + "]:checked").length == 0) {
         check = false;
-        if ($("p." + name).length == 0) {
+        if ($("span." + name).length == 0) {
           $("#" + name).append(
-            $(document.createElement("p"))
-              .addClass("help has-text-danger " + name)
-              .text("此項尚未勾選！")
+            $(document.createElement("span"))
+              .addClass("content is-small has-text-danger " + name)
+              .text("　此項尚未勾選！")
           );
         }
       }
