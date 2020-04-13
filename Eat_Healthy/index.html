@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>飲食、運動自我檢測</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.1/css/bulma.min.css"
+    />
+    <style type="text/css">
+      @media screen and (min-width: 769px), print {
+        .field-label {
+          flex-grow: 2.3;
+          text-align: left;
+        }
+      }
+      .label {
+        font-weight: normal;
+      }
+      .help {
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title" style="font-family: 微軟正黑體;">
+          飲食、運動自我檢測
+        </h1>
+      </div>
+    </section>
+
+    <div class="container box">
+      <div class="columns">
+        <div class="column is-2">
+          <div class="field">
+            <label class="label">姓名</label>
+            <div class="control">
+              <input class="input" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="column is-2">
+          <div class="field">
+            <label class="label">部門</label>
+            <div class="control">
+              <input class="input" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="column is-2">
+          <div class="field">
+            <label class="label">工號</label>
+            <div class="control">
+              <input class="input" type="text" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="title is-5">一、第一招：聰明選、健康吃</h2>
+      <h2 class="subtitle is-6">您平常都吃些什麼？有助於身體健康嗎？</h2>
+      <p class="help">
+        （膳食頻率定義：很少：每週少於 1 次。有時：每週 2~3 次。經常：每週 4
+        次以上）
+      </p>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label"
+            >1. 我吃肉會吃肥肉、皮如焢肉，吃雞鴨鵝皮、肥肉等</label
+          >
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q1" value="1" />
+                (1) 很少
+              </label>
+              <label class="radio">
+                <input type="radio" name="q1" value="2" />
+                (2) 有時
+              </label>
+              <label class="radio">
+                <input type="radio" name="q1" value="3" />
+                (3) 經常
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">2. 我吃油炸、油煎、炒很油的油膩食物</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q2" value="1" />
+                (1) 很少
+              </label>
+              <label class="radio">
+                <input type="radio" name="q2" value="2" />
+                (2) 有時
+              </label>
+              <label class="radio">
+                <input type="radio" name="q2" value="3" />
+                (3) 經常
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">3. 我添加紅燒肉汁、滷湯、燴菜汁、羹類等</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q3" value="1" />
+                (1) 很少
+              </label>
+              <label class="radio">
+                <input type="radio" name="q3" value="2" />
+                (2) 有時
+              </label>
+              <label class="radio">
+                <input type="radio" name="q3" value="3" />
+                (3) 經常
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label"
+            >4. 我吃香腸、醃肉、熱狗、魚餃類、素肉等加工製品</label
+          >
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q4" value="1" />
+                (1) 很少
+              </label>
+              <label class="radio">
+                <input type="radio" name="q4" value="2" />
+                (2) 有時
+              </label>
+              <label class="radio">
+                <input type="radio" name="q4" value="3" />
+                (3) 經常
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">5. 我吃醬瓜、醬菜類、泡菜、豆腐乳等醃製品</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q5" value="1" />
+                (1) 很少
+              </label>
+              <label class="radio">
+                <input type="radio" name="q5" value="2" />
+                (2) 有時
+              </label>
+              <label class="radio">
+                <input type="radio" name="q5" value="3" />
+                (3) 經常
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label"
+            >6. 我吃中式西式糕餅、冰淇淋、奶酥、牛角等甜麵包</label
+          >
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q6" value="1" />
+                (1) 很少
+              </label>
+              <label class="radio">
+                <input type="radio" name="q6" value="2" />
+                (2) 有時
+              </label>
+              <label class="radio">
+                <input type="radio" name="q6" value="3" />
+                (3) 經常
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label"
+            >7. 我喝市售茶飲、包裝果汁、汽水、可樂等含糖飲料</label
+          >
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q7" value="1" />
+                (1) 很少
+              </label>
+              <label class="radio">
+                <input type="radio" name="q7" value="2" />
+                (2) 有時
+              </label>
+              <label class="radio">
+                <input type="radio" name="q7" value="3" />
+                (3) 經常
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">8. 我喝全脂奶或全脂奶製品</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q8" value="1" />
+                (1) 很少
+              </label>
+              <label class="radio">
+                <input type="radio" name="q8" value="2" />
+                (2) 有時
+              </label>
+              <label class="radio">
+                <input type="radio" name="q8" value="3" />
+                (3) 經常
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">9. 我吃蔬菜</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q9" value="3" />
+                (3) 很少
+              </label>
+              <label class="radio">
+                <input type="radio" name="q9" value="2" />
+                (2) 有時
+              </label>
+              <label class="radio">
+                <input type="radio" name="q9" value="1" />
+                (1) 經常
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">10. 我吃水果</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q10" value="3" />
+                (3) 很少
+              </label>
+              <label class="radio">
+                <input type="radio" name="q10" value="2" />
+                (2) 有時
+              </label>
+              <label class="radio">
+                <input type="radio" name="q10" value="1" />
+                (1) 經常
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <table class="table is-bordered">
+        <tbody>
+          <tr id="self-1">
+            <th class="has-text-danger">紅</th>
+            <td>21 - 30分，您的健康已經亮起紅燈，小心代謝症候群找上門來！</td>
+          </tr>
+          <tr id="self-2">
+            <th class="has-text-warning">黃</th>
+            <td>14 - 20分，您的健康正常亮黃燈，一不小心就會亮起紅燈喔。</td>
+          </tr>
+          <tr id="self-3">
+            <th class="has-text-success">綠</th>
+            <td>10 - 13分，恭喜您的健康情況是綠燈，要繼續保持喔。</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="title is-5">二、第二招：站起來、動 30</h2>
+      <h2 class="subtitle is-6">動 30－減少久坐；一天至少運動 30 分鐘</h2>
+      <strong class="help">
+        想想下列情況，如果是的話，請在&#9633;內打勾。
+      </strong>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" />
+            我平常都坐著工作，忙到沒時間起來走動
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" />
+            我上下樓能搭電梯就搭電梯，就算到二樓也部會走樓梯
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" />
+            我常常坐著看電視、用電腦、打電動、滑手機
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" />
+            我很少從事戶外活動
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" />
+            我很少花時間做家事
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" />
+            我很少花時間做運動
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" />
+            我不喜歡流汗和喘氣的感覺
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" />
+            我放假喜歡在家睡覺，不喜歡外出活動
+          </label>
+        </div>
+      </div>
+
+      <p class="help">
+        打完勾後若有超過三項以上，就表示您平常活動量過少，代謝症候群容易上身。<br />
+        最好的解決辦法，就是開始運動！
+      </p>
+
+      <div class="columns">
+        <div class="column is-three-fifths">
+          <article class="message">
+            <div class="message-header">
+              <p>我的活動量足夠嗎？</p>
+            </div>
+            <div class="message-body">
+              世界衛生組織建議成年人<strong>每週必須從事 150 分鐘以上</strong
+              >的中度身體活動，兒童及青少年每天都應至少達到中度身體活動
+              60分鐘以上，每週累積 420 分鐘以上。
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <input
+            class="button is-primary is-light"
+            type="submit"
+            id="submit"
+            value="確認"
+          />
+        </div>
+        <div class="control">
+          <input
+            class="button is-danger is-light"
+            type="reset"
+            id="reset"
+            value="清空"
+          />
+        </div>
+      </div>
+
+      <article class="message" id="alert">
+        <div class="message-body" id="msg">
+          勾選所有項目後點確認！
+        </div>
+      </article>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
