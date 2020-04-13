@@ -1,6 +1,6 @@
 function cleanUp() {
-  $("#msg").text("勾選所有項目後點確認！");
-  $("#alert, #waring").removeClass("is-success is-warning is-danger");
+  $("#result-msg").text("勾選所有項目後點確認！");
+  $("#alert-1").removeClass("is-success is-warning");
 
   $("tr").each(function () {
     $(this).removeClass("is-selected");
@@ -9,6 +9,8 @@ function cleanUp() {
 
 function resetForm() {
   cleanUp();
+
+  $("#alert-2").addClass("is-invisible");
 
   $("input.input").each(function () {
     $(this).val("");
@@ -50,11 +52,21 @@ $(document).ready(function () {
 
       let numOfChecked = $("input:checkbox:checked").length;
 
-      $("#msg").text("第一招總分= " + count + ", 第二招總分= " + numOfChecked);
-      $("#alert").removeClass("is-warning").addClass("is-success");
+      $("#result-msg").text("總分= " + count);
+      $("#alert-1").removeClass("is-warning").addClass("is-success");
     } else {
-      $("#msg").text("請勾選所有項目！");
-      $("#alert").addClass("is-warning");
+      $("#result-msg").text("請勾選所有項目！");
+      $("#alert-1").addClass("is-warning");
     }
+  });
+
+  $("input:checkbox").each(function () {
+    this.addEventListener("change", function () {
+      if ($("input:checkbox:checked").length >= 3) {
+        $("#alert-2").removeClass("is-invisible");
+      } else {
+        $("#alert-2").addClass("is-invisible");
+      }
+    });
   });
 });

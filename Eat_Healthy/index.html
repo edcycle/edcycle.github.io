@@ -19,7 +19,7 @@
         font-weight: normal;
       }
       .help {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
     </style>
   </head>
@@ -332,6 +332,31 @@
         </tbody>
       </table>
 
+      <div class="field is-grouped">
+        <div class="control">
+          <input
+            class="button is-primary is-light"
+            type="submit"
+            id="submit"
+            value="確認"
+          />
+        </div>
+        <div class="control">
+          <input
+            class="button is-danger is-light"
+            type="reset"
+            id="reset"
+            value="清空"
+          />
+        </div>
+      </div>
+
+      <article class="message" id="alert-1">
+        <div class="message-body" id="result-msg">
+          勾選所有項目後點確認！
+        </div>
+      </article>
+
       <h2 class="title is-5">二、第二招：站起來、動 30</h2>
       <h2 class="subtitle is-6">動 30－減少久坐；一天至少運動 30 分鐘</h2>
       <strong class="help">
@@ -415,6 +440,12 @@
         最好的解決辦法，就是開始運動！
       </p>
 
+      <article class="message is-invisible is-danger" id="alert-2">
+        <div class="message-body" id="exercise-msg">
+          超過三項！表示您平常活動量過少，代謝症候群容易上身。
+        </div>
+      </article>
+
       <div class="columns">
         <div class="column is-three-fifths">
           <article class="message">
@@ -429,31 +460,6 @@
           </article>
         </div>
       </div>
-
-      <div class="field is-grouped">
-        <div class="control">
-          <input
-            class="button is-primary is-light"
-            type="submit"
-            id="submit"
-            value="確認"
-          />
-        </div>
-        <div class="control">
-          <input
-            class="button is-danger is-light"
-            type="reset"
-            id="reset"
-            value="清空"
-          />
-        </div>
-      </div>
-
-      <article class="message" id="alert">
-        <div class="message-body" id="msg">
-          勾選所有項目後點確認！
-        </div>
-      </article>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
