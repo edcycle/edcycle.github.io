@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>簡式健康表(BSRS-5)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.1/css/bulma.min.css"
+    />
+    <style type="text/css">
+      @media screen and (min-width: 769px), print {
+        .field-label {
+          flex-grow: 2.3;
+          text-align: left;
+        }
+      }
+      .label {
+        font-weight: normal;
+      }
+      .help {
+        margin-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title" style="font-family: 微軟正黑體;">
+          簡式健康表
+        </h1>
+        <h2 class="subtitle">(BSRS-5)</h2>
+      </div>
+    </section>
+
+    <div class="container box">
+      <div class="columns">
+        <div class="column is-2">
+          <div class="field">
+            <label class="label">姓名</label>
+            <div class="control">
+              <input class="input" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="column is-2">
+          <div class="field">
+            <label class="label">部門</label>
+            <div class="control">
+              <input class="input" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="column is-2">
+          <div class="field">
+            <label class="label">工號</label>
+            <div class="control">
+              <input class="input" type="text" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="help">
+        說明：本量表所列舉的問題是為協助您瞭解您的身心適應狀況，請您仔細回想在最近一星期中(包括今天)，這些問題使您感到困擾或苦惱的程度，然後圈選一個您認為最能代表您感覺的答案。
+      </p>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">1. 睡眠困難,譬如難以入睡、易醒或早醒</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q1" value="0" />
+                完全沒有 (0)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q1" value="1" />
+                輕微 (1)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q1" value="2" />
+                中等程度 (2)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q1" value="3" />
+                厲害 (3)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q1" value="4" />
+                非常厲害 (4)
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">2. 感覺緊張不安</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q2" value="0" />
+                完全沒有 (0)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q2" value="1" />
+                輕微 (1)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q2" value="2" />
+                中等程度 (2)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q2" value="3" />
+                厲害 (3)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q2" value="4" />
+                非常厲害 (4)
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">3. 覺得容易苦惱或動怒</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q3" value="0" />
+                完全沒有 (0)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q3" value="1" />
+                輕微 (1)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q3" value="2" />
+                中等程度 (2)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q3" value="3" />
+                厲害 (3)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q3" value="4" />
+                非常厲害 (4)
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">4. 感覺憂鬱、心情低落</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q4" value="0" />
+                完全沒有 (0)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q4" value="1" />
+                輕微 (1)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q4" value="2" />
+                中等程度 (2)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q4" value="3" />
+                厲害 (3)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q4" value="4" />
+                非常厲害 (4)
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">5. 覺得比不上別人</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q5" value="0" />
+                完全沒有 (0)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q5" value="1" />
+                輕微 (1)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q5" value="2" />
+                中等程度 (2)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q5" value="3" />
+                厲害 (3)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q5" value="4" />
+                非常厲害 (4)
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">&#9733; 有自殺的想法</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q6" value="0" />
+                完全沒有 (0)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q6" value="1" />
+                輕微 (1)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q6" value="2" />
+                中等程度 (2)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q6" value="3" />
+                厲害 (3)
+              </label>
+              <label class="radio">
+                <input type="radio" name="q6" value="4" />
+                非常厲害 (4)
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <input
+            class="button is-primary is-light"
+            type="submit"
+            id="submit"
+            value="確認"
+          />
+        </div>
+        <div class="control">
+          <input
+            class="button is-danger is-light"
+            type="reset"
+            id="reset"
+            value="清空"
+          />
+        </div>
+      </div>
+
+      <article class="message" id="msg">
+        <div class="message-body" id="msg_body">
+          勾選所有項目後點確認！
+        </div>
+      </article>
+
+      <table class="table is-bordered">
+        <tbody>
+          <tr id="score-1">
+            <th>0~5分</th>
+            <td>身心適應狀況良好。</td>
+          </tr>
+          <tr id="score-2">
+            <th>6~9分</th>
+            <td>輕度情緒困擾，建議找家人或朋友談談，抒發情緒。</td>
+          </tr>
+          <tr id="score-3">
+            <th>10~14分</th>
+            <td>中度情緒困擾，建議尋求心理諮商或接受專業諮詢。</td>
+          </tr>
+          <tr id="score-4">
+            <th>&gt;15分</th>
+            <td>重度情緒困擾，需高度關懷，建議尋求專業輔導或精神科治療。</td>
+          </tr>
+          <tr id="score-5">
+            <th>有自殺的想法</th>
+            <td>
+              若此題評量結果為「中等程度」以上，建議立即尋求專業輔導或精神科治療。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

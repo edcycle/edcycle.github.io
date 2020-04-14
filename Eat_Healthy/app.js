@@ -50,10 +50,8 @@ $(document).ready(function () {
         $("#self-3").addClass("is-selected");
       }
 
-      let numOfChecked = $("input:checkbox:checked").length;
-
       $("#result-msg").text("總分= " + count);
-      $("#alert-1").removeClass("is-warning").addClass("is-success");
+      $("#alert-1").addClass("is-success");
     } else {
       $("#result-msg").text("請勾選所有項目！");
       $("#alert-1").addClass("is-warning");
