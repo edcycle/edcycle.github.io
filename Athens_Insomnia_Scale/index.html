@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>簡式健康表(BSRS-5)</title>
+    <title>雅典失眠自評量表</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.8.1/css/bulma.min.css"
@@ -11,7 +11,6 @@
     <style type="text/css">
       @media screen and (min-width: 769px), print {
         .field-label {
-          flex-grow: 1.5;
           text-align: left;
         }
       }
@@ -24,9 +23,9 @@
     <section class="section">
       <div class="container">
         <h1 class="title" style="font-family: 微軟正黑體;">
-          簡式健康表
+          雅典失眠自評量表
         </h1>
-        <h2 class="subtitle">(BSRS-5)</h2>
+        <h2 class="subtitle">Athens Insomnia Scale</h2>
       </div>
     </section>
 
@@ -59,35 +58,33 @@
       </div>
 
       <p class="help">
-        說明：本量表所列舉的問題是為協助您瞭解您的身心適應狀況，請您仔細回想在最近一星期中(包括今天)，這些問題使您感到困擾或苦惱的程度，然後圈選一個您認為最能代表您感覺的答案。
+        說明：失眠的主觀感受很重要，這一份極為通用的量表，可以協助你評估自
+        己睡眠困擾程度，過去一個月以來，如果每星期至少有三天的睡眠困
+        擾，便可加以估算：
       </p>
 
       <div class="field is-horizontal">
         <div class="field-label">
-          <label class="label">1. 睡眠困難,譬如難以入睡、易醒或早醒</label>
+          <label class="label">入睡時間</label>
         </div>
         <div class="field-body">
           <div class="field">
             <div class="control">
               <label class="radio">
                 <input type="radio" name="q1" value="0" />
-                完全沒有 (0)
+                0 沒問題
               </label>
               <label class="radio">
                 <input type="radio" name="q1" value="1" />
-                輕微 (1)
+                1 略為延遲
               </label>
               <label class="radio">
                 <input type="radio" name="q1" value="2" />
-                中等程度 (2)
+                2 中度延遲
               </label>
               <label class="radio">
                 <input type="radio" name="q1" value="3" />
-                厲害 (3)
-              </label>
-              <label class="radio">
-                <input type="radio" name="q1" value="4" />
-                非常厲害 (4)
+                3 嚴重延遲
               </label>
             </div>
           </div>
@@ -96,30 +93,26 @@
 
       <div class="field is-horizontal">
         <div class="field-label">
-          <label class="label">2. 感覺緊張不安</label>
+          <label class="label">睡眠中斷</label>
         </div>
         <div class="field-body">
           <div class="field">
             <div class="control">
               <label class="radio">
                 <input type="radio" name="q2" value="0" />
-                完全沒有 (0)
+                0 沒問題
               </label>
               <label class="radio">
                 <input type="radio" name="q2" value="1" />
-                輕微 (1)
+                1 問題不大
               </label>
               <label class="radio">
                 <input type="radio" name="q2" value="2" />
-                中等程度 (2)
+                2 問題明顯
               </label>
               <label class="radio">
                 <input type="radio" name="q2" value="3" />
-                厲害 (3)
-              </label>
-              <label class="radio">
-                <input type="radio" name="q2" value="4" />
-                非常厲害 (4)
+                3 嚴重中斷
               </label>
             </div>
           </div>
@@ -128,30 +121,26 @@
 
       <div class="field is-horizontal">
         <div class="field-label">
-          <label class="label">3. 覺得容易苦惱或動怒</label>
+          <label class="label">過早清醒</label>
         </div>
         <div class="field-body">
           <div class="field">
             <div class="control">
               <label class="radio">
                 <input type="radio" name="q3" value="0" />
-                完全沒有 (0)
+                0 沒問題
               </label>
               <label class="radio">
                 <input type="radio" name="q3" value="1" />
-                輕微 (1)
+                1 有點提前
               </label>
               <label class="radio">
                 <input type="radio" name="q3" value="2" />
-                中等程度 (2)
+                2 明顯早醒
               </label>
               <label class="radio">
                 <input type="radio" name="q3" value="3" />
-                厲害 (3)
-              </label>
-              <label class="radio">
-                <input type="radio" name="q3" value="4" />
-                非常厲害 (4)
+                3 嚴重早醒
               </label>
             </div>
           </div>
@@ -160,30 +149,26 @@
 
       <div class="field is-horizontal">
         <div class="field-label">
-          <label class="label">4. 感覺憂鬱、心情低落</label>
+          <label class="label">總睡眠時間</label>
         </div>
         <div class="field-body">
           <div class="field">
             <div class="control">
               <label class="radio">
                 <input type="radio" name="q4" value="0" />
-                完全沒有 (0)
+                0 已足夠
               </label>
               <label class="radio">
                 <input type="radio" name="q4" value="1" />
-                輕微 (1)
+                1 有點不足
               </label>
               <label class="radio">
                 <input type="radio" name="q4" value="2" />
-                中等程度 (2)
+                2 中度不足
               </label>
               <label class="radio">
                 <input type="radio" name="q4" value="3" />
-                厲害 (3)
-              </label>
-              <label class="radio">
-                <input type="radio" name="q4" value="4" />
-                非常厲害 (4)
+                3 嚴重不足
               </label>
             </div>
           </div>
@@ -192,30 +177,26 @@
 
       <div class="field is-horizontal">
         <div class="field-label">
-          <label class="label">5. 覺得比不上別人</label>
+          <label class="label">整體睡眠品質</label>
         </div>
         <div class="field-body">
           <div class="field">
             <div class="control">
               <label class="radio">
                 <input type="radio" name="q5" value="0" />
-                完全沒有 (0)
+                0 很滿意
               </label>
               <label class="radio">
                 <input type="radio" name="q5" value="1" />
-                輕微 (1)
+                1 有點不佳
               </label>
               <label class="radio">
                 <input type="radio" name="q5" value="2" />
-                中等程度 (2)
+                2 中度不足
               </label>
               <label class="radio">
                 <input type="radio" name="q5" value="3" />
-                厲害 (3)
-              </label>
-              <label class="radio">
-                <input type="radio" name="q5" value="4" />
-                非常厲害 (4)
+                3 嚴重滿意
               </label>
             </div>
           </div>
@@ -224,35 +205,92 @@
 
       <div class="field is-horizontal">
         <div class="field-label">
-          <label class="label">&#9733; 有自殺的想法</label>
+          <label class="label">白天的美好感*</label>
         </div>
         <div class="field-body">
           <div class="field">
             <div class="control">
               <label class="radio">
                 <input type="radio" name="q6" value="0" />
-                完全沒有 (0)
+                0 還不錯
               </label>
               <label class="radio">
                 <input type="radio" name="q6" value="1" />
-                輕微 (1)
+                1 有點下降
               </label>
               <label class="radio">
                 <input type="radio" name="q6" value="2" />
-                中等程度 (2)
+                2 明顯欠佳
               </label>
               <label class="radio">
                 <input type="radio" name="q6" value="3" />
-                厲害 (3)
-              </label>
-              <label class="radio">
-                <input type="radio" name="q6" value="4" />
-                非常厲害 (4)
+                3 嚴重下降
               </label>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">白天身心功能**</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q7" value="0" />
+                0 還正常
+              </label>
+              <label class="radio">
+                <input type="radio" name="q7" value="1" />
+                1 有點下降
+              </label>
+              <label class="radio">
+                <input type="radio" name="q7" value="2" />
+                2 中度影響
+              </label>
+              <label class="radio">
+                <input type="radio" name="q7" value="3" />
+                3 嚴重下降
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <label class="label">白天嗜睡程度</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="q8" value="0" />
+                0 沒有嗜睡
+              </label>
+              <label class="radio">
+                <input type="radio" name="q8" value="1" />
+                1 輕度嗜睡
+              </label>
+              <label class="radio">
+                <input type="radio" name="q8" value="2" />
+                2 中度嗜睡
+              </label>
+              <label class="radio">
+                <input type="radio" name="q8" value="3" />
+                3 嚴重嗜睡
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="help">
+        * 美好感意指心情、情緒狀態 <br />
+        ** 包括體力、注意力、記憶力等
+      </p>
 
       <div class="field is-grouped">
         <div class="control">
@@ -279,32 +317,15 @@
         </div>
       </article>
 
-      <table class="table is-bordered">
-        <tbody>
-          <tr id="score-1">
-            <th>0~5分</th>
-            <td>身心適應狀況良好。</td>
-          </tr>
-          <tr id="score-2">
-            <th>6~9分</th>
-            <td>輕度情緒困擾，建議找家人或朋友談談，抒發情緒。</td>
-          </tr>
-          <tr id="score-3">
-            <th>10~14分</th>
-            <td>中度情緒困擾，建議尋求心理諮商或接受專業諮詢。</td>
-          </tr>
-          <tr id="score-4">
-            <th>&gt;15分</th>
-            <td>重度情緒困擾，需高度關懷，建議尋求專業輔導或精神科治療。</td>
-          </tr>
-          <tr id="score-5">
-            <th>有自殺的想法</th>
-            <td>
-              若此題評量結果為「中等程度」以上，建議立即尋求專業輔導或精神科治療。
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <article class="message">
+        <div class="message-header">
+          <p>評估結果</p>
+        </div>
+        <div class="message-body">
+          1. 如果的得分是 4 或 5 分，可列為潛在型的失眠。<br />
+          2. 以上八個問項如果總得分等於或超過（≧）6 分的話，極可能罹患有失眠症。
+        </div>
+      </article>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>

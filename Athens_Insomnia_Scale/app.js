@@ -1,10 +1,6 @@
 function cleanUp() {
   $("#msg_body").text("勾選所有項目後點確認！");
-  $("#msg").removeClass("is-success is-warning");
-
-  $("tr").each(function () {
-    $(this).removeClass("is-selected");
-  });
+  $("#msg").removeClass("is-success is-warning is-danger");
 }
 
 function resetForm() {
@@ -34,24 +30,20 @@ $(document).ready(function () {
     if (check) {
       let count = 0;
 
-      for (let i = 1; i < 6; i++) {
+      for (let i = 1; i <= 8; i++) {
         count += parseInt($("input[name='q" + i + "']:checked").val());
       }
 
-      if ($("input[name='q" + 6 + "']:checked").val() >= 2) {
-        $("#score-5").addClass("is-selected");
-      } else if (count > 15) {
-        $("#score-4").addClass("is-selected");
-      } else if (count >= 10 && count < 15) {
-        $("#score-3").addClass("is-selected");
-      } else if (count >= 6 && count < 10) {
-        $("#score-2").addClass("is-selected");
+      if (count >= 6) {
+        $("#msg_body").text("總分 = " + count + "，極可能罹患有失眠症");
+        $("#msg").addClass("is-danger");
+      } else if (count == 4 || count == 5) {
+        $("#msg_body").text("總分 = " + count + "，潛在型的失眠");
+        $("#msg").addClass("is-warning");
       } else {
-        $("#score-1").addClass("is-selected");
+        $("#msg_body").text("總分 = " + count);
+        $("#msg").addClass("is-success");
       }
-
-      $("#msg_body").text("總分 = " + count);
-      $("#msg").addClass("is-success");
     } else {
       $("#msg_body").text("請勾選所有項目！");
       $("#msg").addClass("is-warning");
