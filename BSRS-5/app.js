@@ -40,7 +40,9 @@ $(document).ready(function () {
 
       if ($("input[name='q" + 6 + "']:checked").val() >= 2) {
         $("#score-5").addClass("is-selected");
-      } else if (count >= 15) {
+      }
+
+      if (count >= 15) {
         $("#score-4").addClass("is-selected");
       } else if (count >= 10 && count < 15) {
         $("#score-3").addClass("is-selected");
