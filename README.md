@@ -6,3 +6,4 @@
 - [飲食、運動自我檢測](Eat_Healthy)
 - [簡式健康表(BSRS-5)](BSRS-5)
 - [雅典失眠自評量表](Athens_Insomnia_Scale)
+- [結核病自我檢測](Tuberculosis)
