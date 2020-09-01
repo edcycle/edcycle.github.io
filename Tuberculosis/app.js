@@ -1,5 +1,12 @@
 let count = 0;
 
+const canvas = document.querySelector('canvas');
+const signaturePad = new SignaturePad(canvas);
+
+$('.clear').click(function () {
+  signaturePad.clear();
+});
+
 $('input:checkbox').each(function () {
   this.addEventListener('change', function () {
     if ($(this).is(':checked')) {

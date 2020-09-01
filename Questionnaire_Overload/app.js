@@ -1,64 +1,64 @@
 const PERSONAL_LIST = [
-  "tired",
-  "exhausted",
-  "helpless",
-  "cant_take_it",
-  "fatigued",
-  "weak",
+  'tired',
+  'exhausted',
+  'helpless',
+  'cant_take_it',
+  'fatigued',
+  'weak',
 ];
 
 const WORK_LIST = [
-  "work_helpless",
-  "work_exhausted",
-  "work_frustrated",
-  "work_fatigued",
-  "work_powerless",
-  "work_struggle",
-  "energy",
+  'work_helpless',
+  'work_exhausted',
+  'work_frustrated',
+  'work_fatigued',
+  'work_powerless',
+  'work_struggle',
+  'energy',
 ];
 
 function clearHelp() {
-  $("tr").each(function () {
-    $(this).removeClass("is-selected");
+  $('tr').each(function () {
+    $(this).removeClass('is-selected');
   });
 
-  $("span").each(function () {
+  $('span').each(function () {
     $(this).remove();
   });
 
-  $("#msg").text("勾選所有項目後點確認！");
-  $("article.message").removeClass("is-success is-warning");
+  $('#msg').text('勾選所有項目後點確認！');
+  $('article.message').removeClass('is-success is-warning');
 }
 
 function resetForm() {
   clearHelp();
 
-  $("input:text").each(function () {
-    $(this).val("");
+  $('input:text').each(function () {
+    $(this).val('');
   });
 
-  $("input:radio").each(function () {
-    $(this).prop("checked", false);
+  $('input:radio').each(function () {
+    $(this).prop('checked', false);
   });
 }
 
 $(document).ready(function () {
   // 清空表單
-  $("#reset").click(resetForm);
+  $('#reset').click(resetForm);
 
-  $("#submit").click(function () {
+  $('#submit').click(function () {
     clearHelp();
 
     let check = true;
-    $("input:radio").each(function () {
-      let name = $(this).attr("name");
-      if ($("input:radio[name=" + name + "]:checked").length == 0) {
+    $('input:radio').each(function () {
+      let name = $(this).attr('name');
+      if ($('input:radio[name=' + name + ']:checked').length == 0) {
         check = false;
-        if ($("span." + name).length == 0) {
-          $("#" + name).append(
-            $(document.createElement("span"))
-              .addClass("content is-small has-text-danger " + name)
-              .text("　此項尚未勾選！")
+        if ($('span.' + name).length == 0) {
+          $('#' + name).append(
+            $(document.createElement('span'))
+              .addClass('content is-small has-text-danger ' + name)
+              .text('　此項尚未勾選！')
           );
         }
       }
@@ -76,9 +76,9 @@ $(document).ready(function () {
         // debug text
         console.log(
           name +
-            " 分數: " +
+            ' 分數: ' +
             $("input[name='" + name + "']:checked").val() +
-            " 累加: " +
+            ' 累加: ' +
             personal
         );
       });
@@ -86,11 +86,11 @@ $(document).ready(function () {
       personal = (personal / 6).toFixed(2);
 
       if (personal <= 50) {
-        $("#personal-1").addClass("is-selected");
+        $('#personal-1').addClass('is-selected');
       } else if (personal > 50 && personal < 70) {
-        $("#personal-2").addClass("is-selected");
+        $('#personal-2').addClass('is-selected');
       } else {
-        $("#personal-3").addClass("is-selected");
+        $('#personal-3').addClass('is-selected');
       }
 
       // * 工作相關分數累加
@@ -99,9 +99,9 @@ $(document).ready(function () {
         // debug text
         console.log(
           name +
-            " 分數: " +
+            ' 分數: ' +
             $("input[name='" + name + "']:checked").val() +
-            " 累加: " +
+            ' 累加: ' +
             work
         );
       });
@@ -109,18 +109,25 @@ $(document).ready(function () {
       work = (work / 7).toFixed(2);
 
       if (work <= 45) {
-        $("#work-1").addClass("is-selected");
+        $('#work-1').addClass('is-selected');
       } else if (work > 45 && work < 60) {
-        $("#work-2").addClass("is-selected");
+        $('#work-2').addClass('is-selected');
       } else {
-        $("#work-3").addClass("is-selected");
+        $('#work-3').addClass('is-selected');
       }
 
-      $("#msg").text("個人相關分數 = " + personal + "，工作相關分數 = " + work);
-      $("article.message").addClass("is-success");
+      $('#msg').text('個人相關分數 = ' + personal + '，工作相關分數 = ' + work);
+      $('article.message').addClass('is-success');
     } else {
-      $("#msg").text("請勾選所有項目！");
-      $("article.message").addClass("is-warning");
+      $('#msg').text('請勾選所有項目！');
+      $('article.message').addClass('is-warning');
     }
+  });
+
+  const canvas = document.querySelector('canvas');
+  const signaturePad = new SignaturePad(canvas);
+
+  $('.clear').click(function () {
+    signaturePad.clear();
   });
 });
