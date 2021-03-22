@@ -86,9 +86,12 @@
           </div>
         </div>
       </div>
-      <!-- 膽固醇 ldl-c -->
+      <!-- 低密度脂蛋白膽固醇(LDL-C) -->
       <div class="field">
-        <label class="label">膽固醇 (mg/dl)</label>
+        <label class="label"
+          >低密度脂蛋白膽固醇(LDL-C)
+          <span class="is-size-7">(mg/dl)</span></label
+        >
         <div class="control">
           <label class="radio">
             <input
@@ -98,7 +101,7 @@
               data-female="-2"
               data-male="-3"
             />
-            &lt; 160
+            &lt; 100
           </label>
           <label class="radio">
             <input
@@ -108,13 +111,71 @@
               data-female="0"
               data-male="0"
             />
-            160 ~ 199
+            100 ~ 129
           </label>
           <label class="radio">
             <input
               type="radio"
               name="ldl-c"
               id="ldl-c-3"
+              data-female="0"
+              data-male="0"
+            />
+            130 ~ 159
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="ldl-c"
+              id="ldl-c-4"
+              data-female="2"
+              data-male="1"
+            />
+            160 ~ 190
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="ldl-c"
+              id="ldl-c-5"
+              data-female="2"
+              data-male="2"
+            />
+            &ge; 190
+          </label>
+        </div>
+      </div>
+      <!-- 總膽固醇(T-Chol) -->
+      <div class="field">
+        <label class="label"
+          >總膽固醇(T-Chol) <span class="is-size-7">(mg/dl)</span></label
+        >
+        <div class="control">
+          <label class="radio">
+            <input
+              type="radio"
+              name="t-chol"
+              id="t-chol-1"
+              data-female="-2"
+              data-male="-3"
+            />
+            &lt; 160
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="t-chol"
+              id="t-chol-2"
+              data-female="0"
+              data-male="0"
+            />
+            160 ~ 199
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="t-chol"
+              id="t-chol-3"
               data-female="1"
               data-male="1"
             />
@@ -123,8 +184,8 @@
           <label class="radio">
             <input
               type="radio"
-              name="ldl-c"
-              id="ldl-c-4"
+              name="t-chol"
+              id="t-chol-4"
               data-female="1"
               data-male="2"
             />
@@ -133,8 +194,8 @@
           <label class="radio">
             <input
               type="radio"
-              name="ldl-c"
-              id="ldl-c-5"
+              name="t-chol"
+              id="t-chol-5"
               data-female="3"
               data-male="3"
             />
@@ -142,9 +203,12 @@
           </label>
         </div>
       </div>
-      <!-- 高密度膽固醇 hdl-c -->
+      <!-- 高密度脂蛋白膽固醇(HDL-C) -->
       <div class="field">
-        <label class="label">高密度膽固醇 (mg/dl)</label>
+        <label class="label"
+          >高密度脂蛋白膽固醇(HDL-C)
+          <span class="is-size-7">(mg/dl)</span></label
+        >
         <div class="control">
           <label class="radio">
             <input
@@ -191,8 +255,8 @@
               type="radio"
               name="hdl-c"
               id="hdl-c-5"
-              data-female="-3"
-              data-male="-2"
+              data-female="-2"
+              data-male="-1"
             />
             &ge; 60
           </label>
@@ -200,7 +264,7 @@
       </div>
       <!-- 血壓 bloodpre -->
       <div class="field">
-        <label class="label">血壓 (mmHg)</label>
+        <label class="label">血壓 <span class="is-size-7">(mmHg)</span></label>
         <div class="control">
           <label class="radio">
             <input
@@ -325,28 +389,94 @@
         <div class="message-body" id="msg">勾選所有項目後點確認！</div>
       </article>
 
-      <table class="table is-bordered">
-        <thead>
-          <tr>
-            <th>10年內發生率</th>
-            <th>分類</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr id="score-1">
-            <th>&ge; 20&percnt;</th>
-            <td>高危險</td>
-          </tr>
-          <tr id="score-2">
-            <th>10 - 20&percnt;</th>
-            <td>中度危險</td>
-          </tr>
-          <tr id="score-3">
-            <th>&lt; 10&percnt;</th>
-            <td>低危險</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="columns">
+        <div class="column">
+          <h1 class="title is-5">與預估發生率比較</h1>
+          <table class="table is-striped is-narrow is-bordered is-fullwidth">
+            <thead>
+              <tr>
+                <th rowspan="2">年齡(歲)</th>
+                <th colspan="2">十年內發生缺血性心臟病的機率(%)</th>
+              </tr>
+              <tr>
+                <th>女性</th>
+                <th>男性</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>30~34</th>
+                <th><1%</th>
+                <th>3%</th>
+              </tr>
+              <tr>
+                <th>35~39</th>
+                <th><1%</th>
+                <th>5%</th>
+              </tr>
+              <tr>
+                <th>40~44</th>
+                <th>2%</th>
+                <th>7%</th>
+              </tr>
+              <tr>
+                <th>45~49</th>
+                <th>5%</th>
+                <th>11%</th>
+              </tr>
+              <tr>
+                <th>50~54</th>
+                <th>5%</th>
+                <th>14%</th>
+              </tr>
+              <tr>
+                <th>55~59</th>
+                <th>12%</th>
+                <th>16%</th>
+              </tr>
+              <tr>
+                <th>60~64</th>
+                <th>12%</th>
+                <th>21%</th>
+              </tr>
+              <tr>
+                <th>65~69</th>
+                <th>13%</th>
+                <th>25%</th>
+              </tr>
+              <tr>
+                <th>70~74</th>
+                <th>14%</th>
+                <th>30%</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="column">
+          <table class="table is-bordered">
+            <thead>
+              <tr>
+                <th>10年內發生率</th>
+                <th>分類</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="score-1">
+                <th>&ge; 20&percnt;</th>
+                <td>高危險</td>
+              </tr>
+              <tr id="score-2">
+                <th>10 - 20&percnt;</th>
+                <td>中度危險</td>
+              </tr>
+              <tr id="score-3">
+                <th>&lt; 10&percnt;</th>
+                <td>低危險</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
       <canvas width="400" style="border: 1px solid #e8e8e8"></canvas>
       <button class="button is-small clear">清除</button>
@@ -354,7 +484,7 @@
 
     <div class="container">
       <figure class="image">
-        <img src="frs.jpg" />
+        <img src="frsnew.jpg" />
       </figure>
     </div>
 

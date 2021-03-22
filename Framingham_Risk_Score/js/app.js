@@ -8,9 +8,67 @@ function cleanUp() {
 }
 
 $(document).ready(function () {
-  const NAME_LIST = ['ldl-c', 'hdl-c', 'bloodpressure', 'diabetes', 'smoke'];
+  const LDL_C_NAME_LIST = [
+    'ldl-c',
+    'hdl-c',
+    'bloodpressure',
+    'diabetes',
+    'smoke',
+  ];
+  const CHOL_NAME_LIST = [
+    't-chol',
+    'hdl-c',
+    'bloodpressure',
+    'diabetes',
+    'smoke',
+  ];
 
-  const female_chances = {
+  const LDL_C_FEMALE_CHANCE = {
+    min: '1',
+    '-1': '2',
+    0: '2',
+    1: '2',
+    2: '3',
+    3: '3',
+    4: '4',
+    5: '5',
+    6: '6',
+    7: '7',
+    8: '8',
+    9: '9',
+    10: '11',
+    11: '13',
+    12: '15',
+    13: '17',
+    14: '20',
+    15: '24',
+    16: '27',
+    max: '32',
+  };
+
+  const LDL_C_MALE_CHANCE = {
+    min: '1',
+    '-2': '2',
+    '-1': '2',
+    0: '3',
+    1: '4',
+    2: '4',
+    3: '6',
+    4: '7',
+    5: '9',
+    6: '11',
+    7: '14',
+    8: '18',
+    9: '22',
+    10: '27',
+    11: '33',
+    12: '40',
+    13: '47',
+    max: '56',
+  };
+
+  const CHOL_FEMALE_CHANCE = {
+    min: '1',
     '-1': '2',
     0: '2',
     1: '2',
@@ -29,9 +87,12 @@ $(document).ready(function () {
     14: '18',
     15: '20',
     16: '24',
+    max: '27',
   };
 
-  const male_chances = {
+  const CHOL_MALE_CHANCE = {
+    min: '2',
+    '-2': '2',
     '-1': '2',
     0: '3',
     1: '3',
@@ -47,6 +108,7 @@ $(document).ready(function () {
     11: '31',
     12: '37',
     13: '45',
+    max: '53',
   };
 
   $('#submit').click(function () {
@@ -60,33 +122,69 @@ $(document).ready(function () {
     });
 
     if (check) {
-      let gender = $("input[name='gender']:checked").val();
-
+      const gender = $("input[name='gender']:checked").val();
       const age = $('#age').children('option:selected').data();
-      let result = age[gender];
 
-      NAME_LIST.forEach((name) => {
-        result += $("input[name='" + name + "']:checked").data()[gender];
-      });
+      const LDL_C_PTS = $("input[name='ldl-c']:checked").data(gender);
+      const CHOL_PTS = $("input[name='t-chol']:checked").data(gender);
+      const HDL_C_PTS = $("input[name='hdl-c']:checked").data(gender);
 
-      let chances;
-      let warning;
+      console.log(
+        'ldl-c-pts: ' +
+          LDL_C_PTS +
+          ', t-chol-pts: ' +
+          CHOL_PTS +
+          ', hdl-c-pts: ' +
+          HDL_C_PTS
+      );
+
+      let LdlcChance, CholChance, nameList, chance, min, max, result, warning;
 
       if (gender == 'female') {
-        if (result <= -2) chances = '1';
-        else if (result >= 17) chances = '27';
-        else chances = female_chances[result];
+        LdlcChance = LDL_C_FEMALE_CHANCE;
+        CholChance = CHOL_FEMALE_CHANCE;
+        min = -2;
+        max = 17;
       } else {
-        if (result < -1) chances = '2';
-        else if (result >= 14) chances = '53';
-        else chances = male_chances[result];
+        LdlcChance = LDL_C_MALE_CHANCE;
+        CholChance = CHOL_MALE_CHANCE;
+        min = -3;
+        max = 14;
       }
 
-      if (chances >= 20) {
+      if (LDL_C_PTS >= CHOL_PTS) {
+        nameList = LDL_C_NAME_LIST;
+        chance = LdlcChance;
+      } else {
+        nameList = CHOL_NAME_LIST;
+        chance = CholChance;
+      }
+
+      let points = age[gender];
+      console.log('gender: ' + gender);
+      console.log('age: ' + points);
+
+      nameList.forEach((name) => {
+        // 如果 T-CHOL > LDL-C 且 HDL-C >= 60 分數多扣1分
+        if (name == 't-chol' && HDL_C_PTS < 0) points += -1;
+
+        points += $("input[name='" + name + "']:checked").data(gender);
+        console.log(
+          name + ': ' + $("input[name='" + name + "']:checked").data(gender)
+        );
+      });
+
+      console.log('----------- Total Points: ' + points + ' -----------');
+
+      if (points <= min) result = chance['min'];
+      else if (points >= max) result = chance['max'];
+      else result = chance[points];
+
+      if (result >= 20) {
         $('#score-1').addClass('is-selected');
         $('article.message').addClass('is-danger');
         warning = '高危險';
-      } else if (chances >= 10 && chances < 20) {
+      } else if (result >= 10 && result < 20) {
         $('#score-2').addClass('is-selected');
         $('article.message').addClass('is-warning');
         warning = '中度危險';
@@ -98,9 +196,9 @@ $(document).ready(function () {
 
       $('#msg').text(
         '總分= ' +
-          result +
+          points +
           '，十年內發生機率= ' +
-          chances +
+          result +
           '%，為' +
           warning +
           '群'
