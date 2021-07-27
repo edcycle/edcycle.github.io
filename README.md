@@ -7,3 +7,4 @@
 - [簡式健康表(BSRS-5)](BSRS-5)
 - [雅典失眠自評量表](Athens_Insomnia_Scale)
 - [結核病自我檢測](Tuberculosis)
+- [骨質疏鬆症風險評估](Osteoporosis_Risk)
