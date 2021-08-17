@@ -60,13 +60,13 @@
             </tr>
             <tr>
               <td>1. 父母曾被診斷有骨質疏鬆症或曾在清為跌倒後骨折？</td>
-              <td><input type="radio" name="answer1" /></td>
-              <td><input type="radio" name="answer1" /></td>
+              <td><input type="radio" name="answer1" value="1" /></td>
+              <td><input type="radio" name="answer1" value="0" /></td>
             </tr>
             <tr>
               <td>2. 父母其中一人有駝背狀況？</td>
-              <td><input type="radio" name="answer2" /></td>
-              <td><input type="radio" name="answer2" /></td>
+              <td><input type="radio" name="answer2" value="1" /></td>
+              <td><input type="radio" name="answer2" value="0" /></td>
             </tr>
             <tr>
               <th colspan="3" class="has-background-light">
@@ -78,25 +78,25 @@
             </tr>
             <tr>
               <td>3. 實際年齡超過40歲？</td>
-              <td><input type="radio" name="answer3" /></td>
-              <td><input type="radio" name="answer3" /></td>
+              <td><input type="radio" name="answer3" value="1" /></td>
+              <td><input type="radio" name="answer3" value="0" /></td>
             </tr>
             <tr>
               <td>4. 成年後是否曾經因為摔倒而造成骨折？</td>
-              <td><input type="radio" name="answer4" /></td>
-              <td><input type="radio" name="answer4" /></td>
+              <td><input type="radio" name="answer4" value="1" /></td>
+              <td><input type="radio" name="answer4" value="0" /></td>
             </tr>
             <tr>
               <td>
                 5. 是否經常摔倒 (去年超過一次)，或者因為身體較虛弱而擔心摔倒？
               </td>
-              <td><input type="radio" name="answer5" /></td>
-              <td><input type="radio" name="answer5" /></td>
+              <td><input type="radio" name="answer5" value="1" /></td>
+              <td><input type="radio" name="answer5" value="0" /></td>
             </tr>
             <tr>
               <td>6. 您四十歲後的身高是否減少超過 3 公分以上？</td>
-              <td><input type="radio" name="answer6" /></td>
-              <td><input type="radio" name="answer6" /></td>
+              <td><input type="radio" name="answer6" value="1" /></td>
+              <td><input type="radio" name="answer6" value="0" /></td>
             </tr>
             <tr>
               <td>
@@ -105,8 +105,8 @@
                   [ 註 : BMI計算方式= 體重(公斤)÷身高(公尺)的平方 ]
                 </p>
               </td>
-              <td><input type="radio" name="answer7" /></td>
-              <td><input type="radio" name="answer7" /></td>
+              <td><input type="radio" name="answer7" value="1" /></td>
+              <td><input type="radio" name="answer7" value="0" /></td>
             </tr>
             <tr>
               <td>
@@ -115,46 +115,63 @@
                   [ 可體松通常為治療氣喘、類風濕性關節炎以及某些發炎的疾病 ]
                 </p>
               </td>
-              <td><input type="radio" name="answer8" /></td>
-              <td><input type="radio" name="answer8" /></td>
+              <td><input type="radio" name="answer8" value="1" /></td>
+              <td><input type="radio" name="answer8" value="0" /></td>
             </tr>
             <tr>
               <td>9. 是否患有類風濕性關節炎？</td>
-              <td><input type="radio" name="answer9" /></td>
-              <td><input type="radio" name="answer9" /></td>
+              <td><input type="radio" name="answer9" value="1" /></td>
+              <td><input type="radio" name="answer9" value="0" /></td>
             </tr>
             <tr>
               <td>10. 是否被診斷出有甲狀腺或是副甲狀腺過高的狀況？</td>
-              <td><input type="radio" name="answer10" /></td>
-              <td><input type="radio" name="answer10" /></td>
+              <td><input type="radio" name="answer10" value="1" /></td>
+              <td><input type="radio" name="answer10" value="0" /></td>
             </tr>
             <th colspan="3" class="has-background-danger-light">
+              <p class="is-size-7">男／女性擇一部份回答</p>
               女性朋友請繼續回答以下問題：
             </th>
             <tr>
               <td>11. 您是否在 45 歲或以前便已停經？</td>
-              <td><input type="radio" name="answer11" /></td>
-              <td><input type="radio" name="answer11" /></td>
+              <td>
+                <input type="radio" name="answer11" value="1" class="female" />
+              </td>
+              <td>
+                <input type="radio" name="answer11" value="0" class="female" />
+              </td>
             </tr>
             <tr>
               <td>
                 12. 除了懷孕、更年期或切除子宮後，您是否曾停經超過12個月？
               </td>
-              <td><input type="radio" name="answer12" /></td>
-              <td><input type="radio" name="answer12" /></td>
+              <td>
+                <input type="radio" name="answer12" value="1" class="female" />
+              </td>
+              <td>
+                <input type="radio" name="answer12" value="0" class="female" />
+              </td>
             </tr>
             <tr>
               <td>13. 您是否在五十歲前切除卵巢又沒有服用賀爾蒙補充劑？</td>
-              <td><input type="radio" name="answer13" /></td>
-              <td><input type="radio" name="answer13" /></td>
+              <td>
+                <input type="radio" name="answer13" value="1" class="female" />
+              </td>
+              <td>
+                <input type="radio" name="answer13" value="0" class="female" />
+              </td>
             </tr>
             <th colspan="3" class="has-background-info-light">
               男性朋友請繼續回答以下問題：
             </th>
             <tr>
               <td>14. 是否曾經因雄性激素過低而出現陽萎、失去性慾的症狀？</td>
-              <td><input type="radio" name="answer14" /></td>
-              <td><input type="radio" name="answer14" /></td>
+              <td>
+                <input type="radio" name="answer14" value="1" class="male" />
+              </td>
+              <td>
+                <input type="radio" name="answer14" value="0" class="male" />
+              </td>
             </tr>
             <tr>
               <th colspan="3" class="has-background-light">
@@ -173,31 +190,31 @@
                   ]
                 </p>
               </td>
-              <td><input type="radio" name="answer15" /></td>
-              <td><input type="radio" name="answer15" /></td>
+              <td><input type="radio" name="answer15" value="1" /></td>
+              <td><input type="radio" name="answer15" value="0" /></td>
             </tr>
             <tr>
               <td>16. 有長期吸菸習慣，或曾經吸煙？</td>
-              <td><input type="radio" name="answer16" /></td>
-              <td><input type="radio" name="answer16" /></td>
+              <td><input type="radio" name="answer16" value="1" /></td>
+              <td><input type="radio" name="answer16" value="0" /></td>
             </tr>
             <tr>
               <td>17. 每天運動量少於 30 分鐘？（包含做家事、走路、跑步等）</td>
-              <td><input type="radio" name="answer17" /></td>
-              <td><input type="radio" name="answer17" /></td>
+              <td><input type="radio" name="answer17" value="1" /></td>
+              <td><input type="radio" name="answer17" value="0" /></td>
             </tr>
             <tr>
               <td>18. 您是否避免食用乳製品又沒有服用鈣片？</td>
-              <td><input type="radio" name="answer18" /></td>
-              <td><input type="radio" name="answer18" /></td>
+              <td><input type="radio" name="answer18" value="1" /></td>
+              <td><input type="radio" name="answer18" value="0" /></td>
             </tr>
             <tr>
               <td>
                 19. 您每天從事戶外活動時間是否少於 10 分鐘，又沒有服用維他命D
                 補充劑？
               </td>
-              <td><input type="radio" name="answer19" /></td>
-              <td><input type="radio" name="answer19" /></td>
+              <td><input type="radio" name="answer19" value="1" /></td>
+              <td><input type="radio" name="answer19" value="0" /></td>
             </tr>
           </tbody>
         </table>
@@ -214,14 +231,20 @@
           </div>
         </div>
 
-        <div style="margin-bottom: 10px">
-          <input
-            class="button is-danger is-light"
-            type="reset"
-            id="reset"
-            value="清空表單"
-          />
+        <div class="field">
+          <div class="control">
+            <input
+              class="button is-danger is-light"
+              type="reset"
+              id="reset"
+              value="清空表格"
+            />
+          </div>
         </div>
+
+        <article class="message" id="msg">
+          <div class="message-body" id="msg_body">勾選所有項目後點確認！</div>
+        </article>
 
         <canvas style="border: 1px solid #e8e8e8"></canvas>
         <button class="button is-small clear">清除</button>
